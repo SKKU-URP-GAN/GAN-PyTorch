@@ -9,19 +9,16 @@ def parse_args():
     parser.add_argument('--phase', type=str, default='train', help='train or test ?')
     parser.add_argument('--dataset', type=str, default='celebA', help='[mnist / cifar10 / celebA / your dataset]')
 
-
     parser.add_argument('--epoch', type=int, default=20, help='The number of epochs to run')
     parser.add_argument('--iteration', type=int, default=10000, help='The number of training iterations')
     parser.add_argument('--batch_size', type=int, default=32, help='The size of batch per gpu')
     parser.add_argument('--print_freq', type=int, default=500, help='The number of image_print_freqy')
     parser.add_argument('--save_freq', type=int, default=500, help='The number of ckpt_save_freq')
 
-
     parser.add_argument('--g_lr', type=float, default=0.0001, help='learning rate for generator')
     parser.add_argument('--d_lr', type=float, default=0.0001, help='learning rate for discriminator')
     parser.add_argument('--beta1', type=float, default=0.5, help='beta1 for Adam optimizer')
     parser.add_argument('--beta2', type=float, default=0.999, help='beta2 for Adam optimizer')
-
 
     parser.add_argument('--z_dim', type=int, default=128, help='Dimension of noise vector')
     parser.add_argument('--up_sample', type=str2bool, default=True, help='using upsample-conv')
